@@ -1,0 +1,319 @@
+@charset "utf-8";
+@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700|Signika+Negative");
+
+/*/ Copyright 2013 Chase Moskal /*/
+* { margin:0; padding:0; }
+
+a:link, a:visited { color:#265DC0; }
+a:hover, a:focus  { color:#1D4894; } 
+a:active          { color:#102F66; }
+
+html,body {
+	font-family:Calibri,Candara,Segoe,"Segoe UI",Arial,sans-serif;
+	font-size:14px; color:#4F596F; 
+	background:#777C88; }
+	
+header {
+	position:relative; text-align:center; padding-top:1%;
+	background:#E3E7EC; 
+	background:-webkit-linear-gradient(top,#FFF 60px,#DDE 360px);
+	background:-moz-linear-gradient(top,#FFF 60px,#DDE 360px);
+	background:linear-gradient(to bottom,#FFF 60px,#DDE 360px);
+	background-repeat:no-repeat; background-attachment:fixed; }
+  
+	.logo { padding-top:2%; }
+		.logo>img { 
+			display:block; width:90%; max-width:360px; margin:0 auto; }
+		.logo>span { display:none; }
+  
+	.qinfo {
+    font-style:normal;
+		position:absolute; top:18%; right:3%;
+		display:inline-block; text-align:right; }
+		.qinfo>div {
+			display:block; min-width:3em; margin:0.2em auto;
+			color:#777; color:rgba(71,86,126,0.86); text-decoration:none; }
+		 .qinfo>div i { opacity:0.8; }
+     
+  .socialbox {
+    position:absolute; top:18%; left:3%;
+    display:inline-block; text-align:right; }
+    .social {
+			display:inline-block; width:6em;
+			opacity:0.7; cursor:pointer; text-align: left; }
+			.social:hover, .social:focus { opacity:0.8; }
+			.social:active { opacity:0.9; }
+	@media (max-width:1000px) {
+		.qinfo, .socialbox { position:static; display:block; width:100%; text-align:center; margin:1em auto; }
+			.qinfo>div { 
+        display:block; text-align:center; }
+	} @media (max-width:450px) { 
+		.qinfo>div { margin:0; display:block; }
+			.qinfo>div i { display:block; }
+	}
+  
+	.nav { 
+		z-index:1; position:relative; margin-top:2%;
+		background:#444; box-shadow:0 3px 1px rgba(0,0,0,0.1);
+		-webkit-user-select:none; -moz-user-select:none; user-select:none; }
+		.nav a { 
+      display:inline-block; 
+      font-weight:bold; padding:.3em 1em; font-size:1.2em; line-height:1em;
+      cursor:pointer; color:#DBE0E6; text-decoration:none;
+      font-family:"Signika Negative",Arial,sans-serif; 
+      text-shadow:1px 1px 1px rgba(0,0,0,0.3);
+      -webkit-transition:all 200ms ease; transition:all 200ms ease; }
+      .nav a:hover { background:rgba(0,0,0,0.22); }
+			.nav a:hover, .nav a:focus { color:white; }
+			.nav a:active { color:lemonChiffon; }
+			.nav a.active { text-decoration:underline; }
+	@media (max-width:460px) {
+    .nav a { display:block; }
+	}
+	
+	/*/ Alternate Nav Colors /*/
+	.nav { background:#737C85; }
+		.nav a:active { color:#ABD3FF; }
+
+
+main { 
+	background:#E3E7EC; 
+	background:-webkit-linear-gradient(top,#FFF,#C9D1D1 320px);
+	background:-moz-linear-gradient(top,#FFF,#C9D1D1 320px);
+	background:linear-gradient(to bottom,#FFF,#C9D1D1 320px);
+  background-attachment:fixed; }
+  
+  .page { display:none; }
+
+
+.about {}
+	.about .feature { 
+		position:relative; padding:2%; padding-bottom:8%; padding-left:30%; background:#333; 
+		border-bottom:6px solid #FFFFFF; 
+		-webkit-transition:all 1s ease; transition:all 1s ease; }
+		.about .plate {
+			z-index:2; text-align:left; 
+			position:relative; padding:3% 4%;
+			background:mintCream; background:rgba(255,255,255,0.9);
+			box-shadow:1px 2px 16px rgba(0,0,0,0.2),1px 2px 6px rgba(0,0,0,0.3); }
+			.about .plate h1 { font-size:1.8em; text-align:right; }
+			.about .plate h2 { font-size:1.2em; font-family:Georgia,serif; color:#8A99A8; text-align:right; }
+			.about .plate hr { border:none; height:2px; margin:0.5em auto; background:rgba(121,147,214,0.2); }
+			.about .plate p { font-size:1em; }
+			.about .plate em { font-weight:bold; }
+		.about .slideshow {}
+			.about .slideshow::before { 
+				z-index:1; content:"";display:block; position:absolute; top:0;left:0; 
+				width:100%; height:80%; 
+				background:-moz-linear-gradient(top,rgba(0,0,0,0.3),rgba(0,0,0,0) 10%); 
+				background:-webkit-linear-gradient(top,rgba(0,0,0,0.3),rgba(0,0,0,0) 10%); 
+				background:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0) 10%); }
+			.about .slideshow figure { 
+				position:absolute; top:0;left:0;right:0;bottom:0; z-index:0;
+				background-size:150%; background-size:cover; 
+				background-position:center center; }
+			.about .slideshow figcaption {
+				z-index:1; position:absolute; bottom:0;left:0;
+				width:63%; padding:0.2em 2%; padding-right:35%; background:black; background:rgba(0,0,0,0.6); font-weight:bold; 
+				background:-webkit-linear-gradient(left,rgba(0,0,0,0.6),rgba(0,0,0,0)); 
+				background:-moz-linear-gradient(left,rgba(0,0,0,0.6),rgba(0,0,0,0)); 
+				background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0)); 
+				color:white; text-shadow:1px 1px 1px rgba(0,0,0,0.5); }
+	@media (max-width:375px) {
+		.about .plate { font-size:0.8em; }
+	} @media (max-width:500px) {
+		.about .feature { padding:5%; padding-top:10%; padding-bottom:40%; } 
+	} @media (min-width:1000px) {
+		.about .feature { padding-top:4%; padding-bottom:4%; padding-left:40%; padding-right:12%; }  
+	} @media (min-width:1600px) { 
+		.about .plate { font-size:1.3em; } 
+	}
+	
+	/*///// alternate plate /////*/
+	.about .feature { padding:5% 15%; }
+	.about .plate {
+    margin-bottom:4em;
+		font-size:1em; text-align:center; border-radius:8px;
+		background:transparent; background:rgba(69,69,69,0.86); box-shadow:none; 
+		color:white; text-shadow:1px 1px 5px rgba(0,0,0,0.99); }
+		.about .plate h1, .about .plate h2 { text-align:inherit; }
+		.about .plate h2 { color:white; opacity:0.9; }
+	@media (max-width:700px) {  .about .feature { padding:2%; }  }
+	
+	.about .stage {
+		padding-bottom:4em; 
+		background:#E3E7EC; 
+		background:-webkit-linear-gradient(top,#FFF,#DBE6E6 320px);
+		background:-moz-linear-gradient(top,#FFF,#DBE6E6 320px);
+		background:linear-gradient(to bottom,#FFF,#DBE6E6 320px); }
+		
+		.about .lead {  }
+		.about .lead h1 {
+			padding:0.5em 0; padding-top:2em; text-align:center; font-weight:normal;
+			color:#ACC0C5; font-size:2em; font-family:"Yanone Kaffeesatz",sans-serif; }
+			
+		.about .stand {
+			width:90%; max-width:720px; padding:2em 0; margin:0 auto; }
+			.about .stand section { display:table; margin:1em auto; }
+				.about .icon { 
+					display:table-cell; vertical-align:middle; border-radius:2px 0 0 2px;
+					padding:28px; background:#7A7D85; background:url("http://ruscosupply.ca/images/pat1.png") rgba(14,16,20,0.28); }
+				 .about .alt .icon { border-radius:0 2px 2px 0; }
+					.about .icon img { width:120px; }
+				.about .tidbit { 
+					display:table-cell; vertical-align:middle;
+					padding:2% 4%; border-radius:0 2px 2px 0; 
+					background:white; 
+					background:-webkit-linear-gradient(top,#FFF,rgba(255,255,255,0.69)); 
+					background:-moz-linear-gradient(top,#FFF,rgba(255,255,255,0.69)); 
+					background:linear-gradient(to bottom right,#FFF,rgba(255,255,255,0.69)); }
+         .sce-engaged .about .tidbit { min-width:16em; }
+				 .about .alt .tidbit { border-radius:2px 0 0 2px; }
+					.about .tidbit h1 { font-size:1.5em;  }
+					.about .tidbit h2 { font-size:1.3em; font-style:italic; font-weight:bold; opacity:0.5; }
+					.about .tidbit hr { border:none; background:rgba(0,0,0,0.1); height:2px; margin:0.5em auto; }
+		
+		.about .blurb {
+			width:80%; max-width:640px; padding:1em; margin:0 auto;
+			text-align:justify; color:#81848D; }
+			.about .blurb h1 { 
+				font-family:"Signika Negative",Arial,sans-serif; font-weight:normal;
+				color:#686E7C; }
+		
+		@media (max-width:600px) {
+			.about .stand section { display:block; margin:2em auto; }
+				.about .icon { display:none; }
+				.about .tidbit { display:block; border-radius:2px!important; }
+			.about .blurb { text-align:left; }
+		} @media (min-width:1000px) {
+			.about .stand { max-width:960px; }
+				.about .stand section { font-size:1.2em; } 
+		}
+
+
+
+.products-and-services { 
+	padding-bottom:4em; background:#E4E9F0;
+	box-shadow:inset 0 -34px 69px rgba(0,0,0,0.22); }
+	.pillustration {
+		width:90%; max-width:1400px; padding:10% 0; margin:0 auto;
+		text-align:center;
+		background:url("http://i.imgur.com/jApmIaOh.jpg");
+    background-position: center center;
+		background-size:cover; }
+		.pillustration h1 {
+			display:none; 
+			background:rgba(0,0,0,0.5); padding:0.5em 0;
+			color:white; text-shadow:1px 1px 2px black; }
+	.psframe {
+		display:table; border-spacing:0; border-collapse:collapse;
+		width:90%; max-width:1400px; margin:0 auto; }
+		.psframe>section { 
+			display:table-cell; width:50%; }
+			.psframe h1 { 
+				position:relative; padding:0.2em 16px; padding-top:0.4em;
+				color:#fff; font-family:"Yanone Kaffeesatz","Signika Negative",Arial,sans-serif;
+				text-align:left; font-weight:bold; font-size:2.5em; line-height:0.9em; 
+				text-shadow:1px 1px 2px rgba(44,67,83,0.65); 
+				background:#4E5155; }
+				/*.psframe h1::before {
+					content:""; display:block; 
+					float:right; width:1.2em; height:1.2em;
+					background:url("http://chasemoskal.com/images/icons/wrench.png");
+					background-size:100%; opacity:0.5; }*/
+			.psframe .dish { padding:0.5em 16px; margin-bottom:1em; }
+				.dish h2 { 
+					color:#636974; font-size:1em; font-weight:bold;
+					font-family:Arial,sans-serif; }
+				.dish p { 
+					margin-bottom:0.5em; color:#696D75; text-align:justify;
+					font-family:"Signika Negative",Arial,sans-serif; }
+	.psframe .products {}
+		.psframe .products .dish { padding-right:0.8em; }
+	.psframe .services {}
+	@media (max-width:800px) {
+		.pillustration { display:none; }
+		.psframe { 
+			display:block; width:100%; padding-left:0; padding-right:0; border-radius:3px; }
+			.psframe>section { display:block; width:100%; }
+				.psframe h1 { padding-top:1em; padding-bottom:0.4em; border-radius:0!important; }
+					.psframe .dish { margin-bottom:2em; }
+					.psframe .dish p { text-align:left!important; }
+	} @media (min-width:1200px) {
+		.psframe .dish { padding-right:15%!important; }
+	}
+	.products-and-services .blorb {
+		width:80%; max-width:640px; padding:4em 2%; margin:0 auto;
+		text-align:justify; color:#81848D; }
+		.products-and-services .blorb h1 { 
+			font-family:"Signika Negative",Arial,sans-serif; font-weight:normal;
+			color:#686E7C; }
+	@media (max-width:600px) {
+		.products-and-services .blorb { text-align:left; }
+	}
+
+
+.testimonials {}
+  .bubbles {
+    width:90%; max-width:960px; padding:4% 0; margin:0 auto;
+    text-align:center; }
+    .bubbles aside, .bubbles .testimonial {
+      width:90; max-width:500px; margin:2% auto; 
+      min-height:2em; padding:1% 2%; padding-bottom:1em;
+      text-align:left; border-radius:3px;
+      background:#737C85; color:#FFF;
+      font-family:"Signika Negative",Arial,sans-serif;
+      font-size:1.2em; font-weight:bold;
+      text-shadow:1px 1px 1px rgba(0,0,0,0.3); }
+      .bubbles aside i, .bubbles .testimonial { opacity:0.69; }
+	
+	
+	
+.gallery {
+  padding: 0;
+  }
+
+.notfound { text-align:center; padding:4%; }
+
+
+footer {
+	display:table; width:96%; text-align:center;
+	padding:2%; padding-top:4em; font-size:1.4em; 
+	color:white; color:rgba(255,255,255,0.5); }
+	footer>div {
+		display:table-cell; width:33%; vertical-align:top; text-align:center; }
+    .sce-engaged footer>div { min-width:8em; }
+		footer>div:first-child { text-align:left; padding-right:10%; }
+		footer>div:last-child { text-align:right; padding-left:10%; }
+	
+	footer a, footer a:visited { 
+		padding:0.2em 0.6em; 
+		color:white!important; opacity:0.4; text-decoration:none;
+		-webkit-transition:all 100ms ease; transition:all 100ms ease;
+		}
+	footer a:hover, footer a:focus { 
+		opacity:0.6; text-decoration:none; 
+		background:rgba(0,39,44,0.08); border-radius:3px; }
+	footer a:active { opacity:0.8; }
+		
+	footer>div>a { display:block; }
+
+  .webdevbox {
+    display:block; text-align:right;
+    }
+    .webdev {
+      display: inline-block;
+      font-size: 0.5;
+      opacity: 0.3;
+      padding: 4px 8px;
+      text-decoration: none;
+      color: white!important;
+      }
+      .webdev:hover { opacity: 0.4; }
+        .webdev:hover strong { text-decoration: underline; }
+      .webdev:active { opacity: 0.2; text-decoration: underline; }
+
+@media (max-width:600px) {
+	footer { display:block; }
+		footer>div { display:block; width:90%; margin:0 auto; margin-bottom:3em; }
+}
