@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700|Signika+Negative");
+@import url("//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700|Signika+Negative");
 
 /*/ Copyright 2013 Chase Moskal /*/
 * { margin:0; padding:0; }
@@ -20,55 +20,59 @@ header {
 	background:-moz-linear-gradient(top,#FFF 60px,#DDE 360px);
 	background:linear-gradient(to bottom,#FFF 60px,#DDE 360px);
 	background-repeat:no-repeat; background-attachment:fixed; }
-  
+	
 	.logo { padding-top:2%; }
 		.logo>img { 
 			display:block; width:90%; max-width:360px; margin:0 auto; }
 		.logo>span { display:none; }
-  
+	
 	.qinfo {
-    font-style:normal;
+		font-style:normal;
 		position:absolute; top:18%; right:3%;
 		display:inline-block; text-align:right; }
 		.qinfo>div {
 			display:block; min-width:3em; margin:0.2em auto;
 			color:#777; color:rgba(71,86,126,0.86); text-decoration:none; }
-		 .qinfo>div i { opacity:0.8; }
-     
-  .socialbox {
-    position:absolute; top:18%; left:3%;
-    display:inline-block; text-align:right; }
-    .social {
-			display:inline-block; width:6em;
-			opacity:0.7; cursor:pointer; text-align: left; }
-			.social:hover, .social:focus { opacity:0.8; }
-			.social:active { opacity:0.9; }
+		.qinfo>div i { opacity:0.8; }
+		
+	.socialbox {
+		position:absolute; top:18%; left:3%;
+		display:inline-block; text-align:right; }
+		.social {}
+		.social {
+			display:inline-block; width:30px; height:30px; 
+			opacity:0.5; border-radius:8px; cursor:pointer;
+			box-shadow:1px 2px 1px rgba(0,0,0,0.2); }
+			.social:hover, .social:focus { opacity:0.6; }
+			.social:active { opacity:0.8; }
+			.social.twitter { background-image:url("images/twitter.png"); }
+			.social.facebook { background-image:url("images/facebook.png"); }
 	@media (max-width:1000px) {
 		.qinfo, .socialbox { position:static; display:block; width:100%; text-align:center; margin:1em auto; }
 			.qinfo>div { 
-        display:block; text-align:center; }
+				display:block; text-align:center; }
 	} @media (max-width:450px) { 
 		.qinfo>div { margin:0; display:block; }
 			.qinfo>div i { display:block; }
 	}
-  
+	
 	.nav { 
 		z-index:1; position:relative; margin-top:2%;
 		background:#444; box-shadow:0 3px 1px rgba(0,0,0,0.1);
 		-webkit-user-select:none; -moz-user-select:none; user-select:none; }
 		.nav a { 
-      display:inline-block; 
-      font-weight:bold; padding:.3em 1em; font-size:1.2em; line-height:1em;
-      cursor:pointer; color:#DBE0E6; text-decoration:none;
-      font-family:"Signika Negative",Arial,sans-serif; 
-      text-shadow:1px 1px 1px rgba(0,0,0,0.3);
-      -webkit-transition:all 200ms ease; transition:all 200ms ease; }
-      .nav a:hover { background:rgba(0,0,0,0.22); }
+			display:inline-block; 
+			font-weight:bold; padding:.3em 1em; font-size:1.2em; line-height:1em;
+			cursor:pointer; color:#DBE0E6; text-decoration:none;
+			font-family:"Signika Negative",Arial,sans-serif; 
+			text-shadow:1px 1px 1px rgba(0,0,0,0.3);
+			-webkit-transition:all 200ms ease; transition:all 200ms ease; }
+			.nav a:hover { background:rgba(0,0,0,0.22); }
 			.nav a:hover, .nav a:focus { color:white; }
 			.nav a:active { color:lemonChiffon; }
 			.nav a.active { text-decoration:underline; }
 	@media (max-width:460px) {
-    .nav a { display:block; }
+		.nav a { display:block; }
 	}
 	
 	/*/ Alternate Nav Colors /*/
@@ -81,9 +85,9 @@ main {
 	background:-webkit-linear-gradient(top,#FFF,#C9D1D1 320px);
 	background:-moz-linear-gradient(top,#FFF,#C9D1D1 320px);
 	background:linear-gradient(to bottom,#FFF,#C9D1D1 320px);
-  background-attachment:fixed; }
-  
-  .page { display:none; }
+	background-attachment:fixed; }
+	
+	.page { display:none; }
 
 
 .about {}
@@ -132,7 +136,7 @@ main {
 	/*///// alternate plate /////*/
 	.about .feature { padding:5% 15%; }
 	.about .plate {
-    margin-bottom:4em;
+		margin-bottom:4em;
 		font-size:1em; text-align:center; border-radius:8px;
 		background:transparent; background:rgba(69,69,69,0.86); box-shadow:none; 
 		color:white; text-shadow:1px 1px 5px rgba(0,0,0,0.99); }
@@ -157,8 +161,8 @@ main {
 			.about .stand section { display:table; margin:1em auto; }
 				.about .icon { 
 					display:table-cell; vertical-align:middle; border-radius:2px 0 0 2px;
-					padding:28px; background:#7A7D85; background:url("http://ruscosupply.ca/images/pat1.png") rgba(14,16,20,0.28); }
-				 .about .alt .icon { border-radius:0 2px 2px 0; }
+					padding:28px; background:#7A7D85; background:url("images/pat1.png") rgba(14,16,20,0.28); }
+				.about .alt .icon { border-radius:0 2px 2px 0; }
 					.about .icon img { width:120px; }
 				.about .tidbit { 
 					display:table-cell; vertical-align:middle;
@@ -167,8 +171,8 @@ main {
 					background:-webkit-linear-gradient(top,#FFF,rgba(255,255,255,0.69)); 
 					background:-moz-linear-gradient(top,#FFF,rgba(255,255,255,0.69)); 
 					background:linear-gradient(to bottom right,#FFF,rgba(255,255,255,0.69)); }
-         .sce-engaged .about .tidbit { min-width:16em; }
-				 .about .alt .tidbit { border-radius:2px 0 0 2px; }
+				.sce-engaged .about .tidbit { min-width:16em; }
+				.about .alt .tidbit { border-radius:2px 0 0 2px; }
 					.about .tidbit h1 { font-size:1.5em;  }
 					.about .tidbit h2 { font-size:1.3em; font-style:italic; font-weight:bold; opacity:0.5; }
 					.about .tidbit hr { border:none; background:rgba(0,0,0,0.1); height:2px; margin:0.5em auto; }
@@ -198,8 +202,8 @@ main {
 	.pillustration {
 		width:90%; max-width:1400px; padding:10% 0; margin:0 auto;
 		text-align:center;
-		background:url("http://i.imgur.com/jApmIaOh.jpg");
-    background-position: center center;
+		background:url("./imgur/jApmIaOh.jpg");
+		background-position: center center;
 		background-size:cover; }
 		.pillustration h1 {
 			display:none; 
@@ -251,27 +255,29 @@ main {
 	@media (max-width:600px) {
 		.products-and-services .blorb { text-align:left; }
 	}
+	
+
 
 
 .testimonials {}
-  .bubbles {
-    width:90%; max-width:960px; padding:4% 0; margin:0 auto;
-    text-align:center; }
-    .bubbles aside, .bubbles .testimonial {
-      width:90; max-width:500px; margin:2% auto; 
-      min-height:2em; padding:1% 2%; padding-bottom:1em;
-      text-align:left; border-radius:3px;
-      background:#737C85; color:#FFF;
-      font-family:"Signika Negative",Arial,sans-serif;
-      font-size:1.2em; font-weight:bold;
-      text-shadow:1px 1px 1px rgba(0,0,0,0.3); }
-      .bubbles aside i, .bubbles .testimonial { opacity:0.69; }
+	.bubbles {
+		width:90%; max-width:960px; padding:4% 0; margin:0 auto;
+		text-align:center; }
+		.bubbles aside, .bubbles .testimonial {
+			width:90; max-width:500px; margin:2% auto; 
+			min-height:2em; padding:1% 2%; padding-bottom:1em;
+			text-align:left; border-radius:3px;
+			background:#737C85; color:#FFF;
+			font-family:"Signika Negative",Arial,sans-serif;
+			font-size:1.2em; font-weight:bold;
+			text-shadow:1px 1px 1px rgba(0,0,0,0.3); }
+			.bubbles aside i, .bubbles .testimonial { opacity:0.69; }
 	
 	
 	
 .gallery {
-  padding: 0;
-  }
+	padding: 0;
+	}
 
 .notfound { text-align:center; padding:4%; }
 
@@ -282,7 +288,7 @@ footer {
 	color:white; color:rgba(255,255,255,0.5); }
 	footer>div {
 		display:table-cell; width:33%; vertical-align:top; text-align:center; }
-    .sce-engaged footer>div { min-width:8em; }
+		.sce-engaged footer>div { min-width:8em; }
 		footer>div:first-child { text-align:left; padding-right:10%; }
 		footer>div:last-child { text-align:right; padding-left:10%; }
 	
@@ -298,20 +304,20 @@ footer {
 		
 	footer>div>a { display:block; }
 
-  .webdevbox {
-    display:block; text-align:right;
-    }
-    .webdev {
-      display: inline-block;
-      font-size: 0.5;
-      opacity: 0.3;
-      padding: 4px 8px;
-      text-decoration: none;
-      color: white!important;
-      }
-      .webdev:hover { opacity: 0.4; }
-        .webdev:hover strong { text-decoration: underline; }
-      .webdev:active { opacity: 0.2; text-decoration: underline; }
+	.webdevbox {
+		display:block; text-align:right;
+		}
+		.webdev {
+			display: inline-block;
+			font-size: 0.5;
+			opacity: 0.3;
+			padding: 4px 8px;
+			text-decoration: none;
+			color: white!important;
+			}
+			.webdev:hover { opacity: 0.4; }
+				.webdev:hover strong { text-decoration: underline; }
+			.webdev:active { opacity: 0.2; text-decoration: underline; }
 
 @media (max-width:600px) {
 	footer { display:block; }
